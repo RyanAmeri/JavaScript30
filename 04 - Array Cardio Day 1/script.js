@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Array Cardio 💪</title>
-</head>
-<body>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-  <script>
-    // Get your shorts on - this is an array workout!
-    // ## Array Cardio Day 1
-
-    // Some data we can work with
-
 
     const inventors = [
         { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
@@ -35,7 +21,7 @@
       const youngerthan1500 = () => {
         return inventors.filter((inventor) => inventor.year > 1499 && inventor.year < 1600)
       }
-      console.log(youngerthan1500());
+      console.table(youngerthan1500());
 
 
     // Array.prototype.map()
@@ -44,7 +30,7 @@
     const firstAndLast = () => {
         return inventors.map((inventor) => inventor.first + ' ' + inventor.last)
     }
-    console.log(firstAndLast());
+    console.table(firstAndLast());
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
@@ -54,7 +40,7 @@
         return newInventors.sort((a, b) => a.year - b.year)
     }
 
-    console.log(sortedInventors())
+    console.table(sortedInventors())
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
@@ -72,7 +58,7 @@
         return newArr.sort((a, b) => (a.passed - a.year) - (b.passed - b.year) )
     }
 
-    console.log(yearsLived(inventors));
+    console.table(yearsLived(inventors));
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -81,7 +67,7 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
-    console.log(people.sort());
+    console.table(people.sort());
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
@@ -94,8 +80,4 @@
         }, new Map());
     };
 
-    console.log(countData(data));
-
-  </script>
-</body>
-</html>
+    console.table(countData(data));
